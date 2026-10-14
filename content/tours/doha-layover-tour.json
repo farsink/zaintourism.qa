@@ -1,0 +1,123 @@
+{
+  "slug": "doha-layover-tour",
+  "title": "Doha Layover Tour",
+  "category": "Layover",
+  "duration": "4 hours",
+  "pickup": "Hotel, airport or cruise terminal",
+  "image": "/images/experiences/doha-layover.jpg",
+  "imageAlt": "The Doha Corniche waterfront promenade with the West Bay skyline across the water",
+  "summary": "A four-hour private city route built around your flight, with pickup at Hamad International Airport, your luggage locked safely in the vehicle and a monitored return well before departure.",
+  "overview": "A long stopover does not have to be spent in the terminal. This private route is built around your flight: meet your driver-guide at arrivals at Hamad International Airport, leave your luggage locked in the vehicle, and spend the hours between flights seeing the city. You drive the Corniche with photo stops by the Museum of Islamic Art, walk the lanes of Souq Waqif with your guide, and continue to The Pearl, Lusail Marina and Katara Cultural Village before returning to the airport. Your flight is monitored throughout, so the drop-off is timed for your departure with a comfortable buffer. Plan on roughly four hours for the tour itself, which fits a layover of six hours or more.",
+  "bestFor": "Travellers with a long Qatar Airways stopover",
+  "highlights": [
+    "Arrivals pickup at Hamad International Airport",
+    "Luggage locked in the vehicle the whole time",
+    "Souq Waqif and Katara guided walks",
+    "Flight monitoring for a timed airport return"
+  ],
+  "stats": [
+    { "value": "4 hours", "label": "City route between flights" },
+    { "value": "Private", "label": "Car and driver-guide for your party only" },
+    { "value": "Souq Waqif", "label": "Guided walk with your guide" },
+    { "value": "Airport arrivals", "label": "Pickup, exit gate 4" }
+  ],
+  "gallery": [
+    { "image": "/images/experiences/doha-layover.jpg", "imageAlt": "The Doha Corniche waterfront promenade with the West Bay skyline across the water" },
+    { "image": "/images/tours/doha-layover-tour/doha-corniche-skyline.jpg", "imageAlt": "The West Bay skyline seen across Doha Bay from the Corniche" },
+    { "image": "/images/tours/doha-layover-tour/souq-waqif-alley.jpg", "imageAlt": "Lamp-lit market alley with traditional souvenirs at Souq Waqif, Doha" },
+    { "image": "/images/tours/doha-layover-tour/qatari-dune-sunset.jpg", "imageAlt": "Sunset over rippled sand dunes in the Qatari desert" }
+  ],
+  "itinerary": [
+    {
+      "time": "Start",
+      "title": "Meet your driver-guide at arrivals",
+      "description": "Your driver-guide waits in the arrivals area of Hamad International Airport, by exit gate 4. Pickup can also start from any hotel in the city or the Doha Cruise Terminal."
+    },
+    {
+      "time": "Stop 1",
+      "title": "Doha Corniche and Museum of Islamic Art",
+      "description": "Drive the sweeping bay beneath the West Bay towers, with photo stops near the Museum of Islamic Art. The pace is set by the time your flight leaves you."
+    },
+    {
+      "time": "Stop 2",
+      "title": "Souq Waqif guided walk",
+      "description": "Step into the restored market lanes with your guide, past the spice stalls and the falcon market. A walkable stop that stretches the legs after the flight."
+    },
+    {
+      "time": "Stop 3",
+      "title": "The Pearl Island and Lusail Marina",
+      "description": "Photo time at the marina among the yachts of The Pearl, followed by a short stop at Lusail Marina. The two are a quick vehicle hop apart."
+    },
+    {
+      "time": "Stop 4",
+      "title": "Katara Cultural Village",
+      "description": "Walk with your guide through the amphitheatre and mosque courtyards of Katara. Your guide keeps the visit on pace for your connection."
+    },
+    {
+      "time": "Finish",
+      "title": "Timed drop-off at the airport",
+      "description": "Your flight is monitored along the way, and the return is planned before your departure. Your luggage has travelled locked in the vehicle and comes back with you."
+    }
+  ],
+  "included": [
+    "Private air-conditioned vehicle with driver-guide, for your party only",
+    "Pickup at the Hamad International Airport arrivals terminal, exit gate 4, or from any Doha hotel or the cruise terminal",
+    "Guided walking stops at Souq Waqif and Katara",
+    "Flight monitoring and a return timed before your departure",
+    "Bottled drinking water"
+  ],
+  "excluded": [
+    "Meals",
+    "Anything not listed as included"
+  ],
+  "notes": [
+    "The four-hour route needs about six hours between flights for immigration, the tour and departure security. With eight hours or more, a desert safari or the National Museum of Qatar can be added — enquire and we will suggest what fits.",
+    "Stop order and timing shift with traffic and your flight's departure; the driver adjusts the route to keep your connection safe.",
+    "Souq Waqif and Katara involve walking on footpaths, so wear comfortable shoes and carry sun protection in the warmer months.",
+    "Luggage stays locked in the vehicle throughout, so keep valuables and travel documents with you.",
+    "The tour runs in English by default; other languages are available on request when you enquire."
+  ],
+  "faqs": [
+    {
+      "question": "How much time do I need between flights to join this tour?",
+      "answer": "Plan on about six hours between flights. That covers immigration on arrival, the four-hour tour, and clearing security again for your departure."
+    },
+    {
+      "question": "Where exactly does the driver meet me?",
+      "answer": "In the arrivals area of Hamad International Airport, by exit gate 4. Pickup can also start from any hotel in Doha or the Doha Cruise Terminal, and the tour always finishes at the airport."
+    },
+    {
+      "question": "Can I bring my cabin bags and luggage on the tour?",
+      "answer": "Yes. Your bags stay locked in the vehicle for the whole tour and are returned to you at the airport drop-off."
+    },
+    {
+      "question": "What happens if my flight is delayed?",
+      "answer": "Your flight is monitored while you are out. If it lands late, the pickup is held accordingly, and the return is timed so you board your onward flight."
+    },
+    {
+      "question": "Is the tour private?",
+      "answer": "Yes. The air-conditioned car and driver-guide are for your party only, in English by default with other languages on request."
+    },
+    {
+      "question": "Can I add the desert safari or the National Museum if my layover is long?",
+      "answer": "With eight hours or more between flights, either can usually be added to the route. Mention your timings when you enquire and we will confirm what fits."
+    }
+  ],
+  "sampleReviews": [
+    {
+      "name": "Priya S.",
+      "country": "India",
+      "month": "March",
+      "title": "Made the layover worth it",
+      "text": "We had a seven-hour stop and used it well. Our bags stayed safely in the car while we walked the souq, and the driver's flight tracking got us back with time to spare."
+    },
+    {
+      "name": "Tom W.",
+      "country": "United Kingdom",
+      "month": "October",
+      "title": "Smooth, punctual, private",
+      "text": "Waiting at exit gate 4 felt like being met by a friend. The Corniche and Katara were worthwhile, and ending right at departures took the stress out of a tight connection."
+    }
+  ],
+  "relatedSlugs": ["doha-city-tour", "desert-safari-qatar", "doha-desert-combo"]
+}

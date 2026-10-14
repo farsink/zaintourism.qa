@@ -1,0 +1,124 @@
+{
+  "slug": "doha-city-tour",
+  "title": "Doha City Tour with Hotel Pickup",
+  "category": "City Tours",
+  "duration": "4 hours",
+  "pickup": "Hotel or Hamad International Airport",
+  "image": "/images/experiences/doha-city-tour.jpg",
+  "imageAlt": "The Doha Corniche waterfront with the West Bay skyline across the water",
+  "summary": "The Corniche, Souq Waqif, Katara and The Pearl in one relaxed four-hour loop, with pickup from your hotel or the airport and a licensed local guide.",
+  "overview": "Four hours is enough to meet Doha properly when someone else handles the driving. You are collected from your hotel or from the arrivals hall at Hamad International Airport and travel in an air-conditioned vehicle with a licensed English-speaking guide. The city unfolds from there: the waterfront curve of the Corniche beneath the West Bay towers, the lanes of Souq Waqif with their spice and falcon markets, the amphitheatre and mosques of Katara Cultural Village, and the marina at The Pearl. You walk with your guide at the souq, Katara and The Pearl, and the short drives in between keep the pace easy. Choose a shared group departure or a private vehicle for your own party — tell us which when you enquire and we will confirm your pickup time.",
+  "bestFor": "First-time visitors, families and short stays",
+  "highlights": [
+    "Corniche and the West Bay skyline",
+    "Guided walk through Souq Waqif",
+    "Katara Cultural Village and The Pearl marina",
+    "Hotel or airport pickup with a licensed guide"
+  ],
+  "stats": [
+    { "value": "4 hours", "label": "Morning to afternoon" },
+    { "value": "Private or shared", "label": "Air-conditioned vehicle and guide" },
+    { "value": "Souq Waqif", "label": "Guided walk with your guide" },
+    { "value": "Hotel or airport", "label": "Pickup and drop-off" }
+  ],
+  "gallery": [
+    { "image": "/images/experiences/doha-city-tour.jpg", "imageAlt": "The Doha Corniche waterfront with the West Bay skyline across the water" },
+    { "image": "/images/tours/doha-city-tour/doha-corniche-skyline.jpg", "imageAlt": "The West Bay skyline across the water as seen from a waterfront promenade at the Doha Corniche" },
+    { "image": "/images/tours/doha-city-tour/souq-waqif-market-alley.jpg", "imageAlt": "A covered arcade lane in Souq Waqif market in Doha decorated with colorful hanging umbrellas" },
+    { "image": "/images/tours/doha-city-tour/museum-of-islamic-art-fountain.jpg", "imageAlt": "A fountain installation of steel spheres and water jets on the Museum of Islamic Art grounds in Doha" }
+  ],
+  "itinerary": [
+    {
+      "time": "Start",
+      "title": "Pickup at your door",
+      "description": "Your guide and driver collect you from any hotel in Doha or from the arrivals hall at Hamad International Airport. Board an air-conditioned vehicle and set the pace for the morning."
+    },
+    {
+      "time": "Stop 1",
+      "title": "Doha Corniche and West Bay",
+      "description": "Follow the sweeping waterfront bay for views of the West Bay skyline. A photo stop near the Museum of Islamic Art park adds a quiet angle on the water."
+    },
+    {
+      "time": "Stop 2",
+      "title": "Souq Waqif guided walk",
+      "description": "Walk the restored market lanes with your guide, from the spice alley to the falcon market and the Gold Souq. Time to browse, photograph and ask questions along the way."
+    },
+    {
+      "time": "Stop 3",
+      "title": "Katara Cultural Village",
+      "description": "Step between the amphitheatre, the mosques and the cultural buildings of Katara. Your guide explains how the village stages Qatar's arts and traditions."
+    },
+    {
+      "time": "Stop 4",
+      "title": "The Pearl and Lusail Marina",
+      "description": "Stroll the marina at Porto Arabia among the yachts and waterfront towers, with a photo stop at Lusail Marina on the way."
+    },
+    {
+      "time": "Finish",
+      "title": "Drop-off wherever suits you",
+      "description": "Return to your hotel, the airport or another preferred location in Doha. The route ends about four hours after pickup."
+    }
+  ],
+  "included": [
+    "Pickup from any Doha hotel or from the Hamad International Airport arrivals hall",
+    "Drop-off at your preferred location in Doha",
+    "Licensed English-speaking guide",
+    "Air-conditioned vehicle",
+    "Bottled drinking water"
+  ],
+  "excluded": [
+    "Meals",
+    "Interior museum visits — the Museum of Islamic Art is an exterior and park photo stop on this route",
+    "Anything not listed as included"
+  ],
+  "notes": [
+    "Plan for about four hours in a morning-to-afternoon format; the stop order can shift with traffic, weather and seasonal daylight.",
+    "Souq Waqif, Katara and The Pearl all involve walking, so wear comfortable shoes and bring sun protection in the warmer months.",
+    "Infants under 3 travel free, and children aged 3 to 11 have a dedicated child option — share your group's ages when you enquire.",
+    "Cancellations are accepted up to 24 hours before departure.",
+    "A dhow cruise on Doha Bay pairs well with this tour as a separate evening experience; it is not part of this tour's own inclusions."
+  ],
+  "faqs": [
+    {
+      "question": "How long does the Doha city tour take?",
+      "answer": "About four hours door to door, running in a morning-to-afternoon format. The exact start time is confirmed when you book, based on your pickup point and the season."
+    },
+    {
+      "question": "Where does the tour pick me up?",
+      "answer": "From any hotel in Doha or directly from the arrivals hall at Hamad International Airport. At the end, we drop you at whichever location you prefer."
+    },
+    {
+      "question": "Is this a private tour or a shared group tour?",
+      "answer": "Both are available. A shared departure joins other travellers in the vehicle, while a private booking keeps the vehicle and guide for your group only — let us know which you prefer."
+    },
+    {
+      "question": "Do we go inside the Museum of Islamic Art?",
+      "answer": "This route views the museum from the outside with a photo stop in its park. If you want the galleries, the Museum of Islamic Art & Souq Waqif guided tour is the better match."
+    },
+    {
+      "question": "Can children join the tour?",
+      "answer": "Yes. Infants under 3 travel free, and children aged 3 to 11 have a dedicated child option. Tell us your group's ages when you enquire so the vehicle and seating are right."
+    },
+    {
+      "question": "What should I wear and bring?",
+      "answer": "Comfortable, modest clothing and walking shoes cover all three walking stops. Bring sun protection and a camera — the Corniche and marina viewpoints are the photo highlights."
+    }
+  ],
+  "sampleReviews": [
+    {
+      "name": "Lena M.",
+      "country": "Netherlands",
+      "month": "November",
+      "title": "Four hours, the whole city",
+      "text": "We were picked up at the airport arrivals hall and somehow saw the Corniche, the souq and The Pearl with time left over. Our guide answered every question and never rushed a single stop."
+    },
+    {
+      "name": "Omar R.",
+      "country": "Pakistan",
+      "month": "February",
+      "title": "The souq walk was the highlight",
+      "text": "The falcon market and spice alley came alive because our guide knew the shopkeepers by name. Comfortable car, cold water, and an easy drop-off back at our hotel."
+    }
+  ],
+  "relatedSlugs": ["museum-souq-waqif-tour", "sunset-dhow-cruise", "doha-desert-combo"]
+}

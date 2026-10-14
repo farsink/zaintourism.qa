@@ -1,0 +1,853 @@
+export interface QatarExperience {
+    slug: string
+    title: string
+    category: string
+    duration: string
+    pickup: string
+    image: string
+    imageAlt: string
+    summary: string
+    overview: string
+    highlights: string[]
+    itinerary: { time: string, title: string, description: string }[]
+    bestFor: string
+}
+
+export const qatarPreviewBasePath = ''
+
+export const getQatarPreviewNavigation = (basePath = qatarPreviewBasePath) => [
+    { label: 'Home', href: basePath || '/' },
+    { label: 'Tours', href: `${basePath}/tours` },
+    { label: 'Services', href: `${basePath}/services` },
+    { label: 'About us', href: `${basePath}/about-us` },
+    { label: 'Contact', href: `${basePath}/contact-us` }
+]
+
+export const qatarPreviewNavigation = getQatarPreviewNavigation()
+
+export interface QatarToursMenuItem {
+    label: string
+    description?: string
+    href: string
+}
+
+export const qatarToursMenu: QatarToursMenuItem[] = [
+    { label: 'Desert Safari Qatar', description: 'Dune bashing, Inland Sea & sunset', href: `${qatarPreviewBasePath}/tours/desert-safari-qatar` },
+    { label: 'Doha City Tour', description: 'Corniche, Souq Waqif & The Pearl', href: `${qatarPreviewBasePath}/tours/doha-city-tour` },
+    { label: 'Museum of Islamic Art & Souq', description: 'Guided culture morning', href: `${qatarPreviewBasePath}/tours/museum-souq-waqif-tour` },
+    { label: 'Sunset Dhow Cruise', description: 'Doha Bay on a wooden dhow', href: `${qatarPreviewBasePath}/tours/sunset-dhow-cruise` },
+    { label: 'City + Desert Combo', description: 'The full Qatar day', href: `${qatarPreviewBasePath}/tours/doha-desert-combo` },
+    { label: 'All tours', href: `${qatarPreviewBasePath}/tours` }
+]
+
+export const qatarExperiences: QatarExperience[] = [
+    {
+        slug: 'doha-city-discovery',
+        title: 'Doha city discovery',
+        category: 'City & culture',
+        duration: '4–5 hours',
+        pickup: 'Hotel or airport pickup',
+        image: '/images/dest/kyoto.jpg',
+        imageAlt: 'A city street used as a local preview image',
+        summary: 'A private introduction to Doha that balances heritage markets, waterfront views and contemporary city landmarks.',
+        overview: 'For travellers with one free morning or a full day in Doha, this flexible route brings together Souq Waqif, the Corniche, Katara and The Pearl. The order is shaped around your pickup point, pace and interests.',
+        highlights: ['Souq Waqif and the Corniche', 'Katara Cultural Village', 'The Pearl waterfront', 'Flexible hotel or airport pickup'],
+        itinerary: [
+            { time: 'Start', title: 'Meet at your pickup point', description: 'Begin from your hotel, airport area or another confirmed point in Doha.' },
+            { time: 'Stop 1', title: 'Heritage and market lanes', description: 'Walk the lanes around Souq Waqif and pause for the places that interest you.' },
+            { time: 'Stop 2', title: 'Waterfront and city views', description: 'Follow the Corniche for a clear view of the bay and West Bay skyline.' },
+            { time: 'Finish', title: 'Culture or marina time', description: 'Choose Katara, The Pearl, a museum stop or extra time at the market.' }
+        ],
+        bestFor: 'First-time visitors, families and short stays'
+    },
+    {
+        slug: 'desert-and-inland-sea',
+        title: 'Desert & Inland Sea escape',
+        category: 'Desert adventure',
+        duration: '4–6 hours',
+        pickup: 'Doha hotel pickup',
+        image: '/images/dest/sahara.jpg',
+        imageAlt: 'Desert dunes used as a local preview image',
+        summary: 'Trade the city for open dunes, desert viewpoints and the landscape around Khor Al Adaid.',
+        overview: 'A desert outing can be calm, high-energy or somewhere in between. This preview service page explains the shape of a private 4×4 journey, with time for dune scenery, photo stops and the Inland Sea area.',
+        highlights: ['Private 4×4 route', 'Dune viewpoints and photo stops', 'Inland Sea landscape', 'Pace matched to your group'],
+        itinerary: [
+            { time: 'Start', title: 'Leave Doha', description: 'Meet at your accommodation and travel south towards the desert entry point.' },
+            { time: 'Stop 1', title: 'Dunes and open desert', description: 'Settle into the desert landscape with a route adapted to your comfort level.' },
+            { time: 'Stop 2', title: 'Inland Sea viewpoint', description: 'Pause near the water and enjoy the contrast between sea, sand and horizon.' },
+            { time: 'Finish', title: 'Return to Doha', description: 'Travel back with a drop-off at your original or an agreed central location.' }
+        ],
+        bestFor: 'Visitors who want a half-day contrast to central Doha'
+    },
+    {
+        slug: 'layover-doha',
+        title: 'Doha layover route',
+        category: 'Layover',
+        duration: '3–5 hours',
+        pickup: 'Airport-area pickup',
+        image: '/images/dest/atlas.jpg',
+        imageAlt: 'A wide landscape used as a local preview image',
+        summary: 'Make a long stopover feel purposeful with a clear, time-aware introduction to the city.',
+        overview: 'The preview itinerary is designed around the time you actually have, with room for the journey back. Choose a heritage, waterfront or modern-Doha emphasis after confirming your arrival and onward departure times.',
+        highlights: ['Built around your connection window', 'Airport-area collection', 'Short, flexible sightseeing stops', 'Return-time planning'],
+        itinerary: [
+            { time: 'Before arrival', title: 'Confirm the available window', description: 'Share your flight timings so the route can keep a comfortable return buffer.' },
+            { time: 'Stop 1', title: 'Choose one city focus', description: 'Select the market, waterfront, culture or a combination that fits your time.' },
+            { time: 'Stop 2', title: 'Pause for the essentials', description: 'Use a relaxed route with time for photos, refreshment or a short meal.' },
+            { time: 'Finish', title: 'Return for your onward journey', description: 'Head back with the agreed arrival buffer before your next flight.' }
+        ],
+        bestFor: 'Transit passengers with a meaningful daytime connection'
+    },
+    {
+        slug: 'culture-and-museums',
+        title: 'Culture & museum day',
+        category: 'Culture',
+        duration: '4 hours',
+        pickup: 'Hotel pickup',
+        image: '/images/about-editorial.jpg',
+        imageAlt: 'A calm travel scene used as a local preview image',
+        summary: 'Build a slower day around Doha’s museums, design, heritage spaces and waterfront surroundings.',
+        overview: 'This original preview route is for travellers who want context, not a checklist. Pair a museum visit with heritage architecture, the Corniche, Katara or time at Souq Waqif according to your interests.',
+        highlights: ['Museum or heritage focus', 'Doha architecture and design', 'Waterfront time', 'Flexible stops for families or small groups'],
+        itinerary: [
+            { time: 'Start', title: 'Set the day’s theme', description: 'Choose a heritage, museum or architecture-led route before departure.' },
+            { time: 'Stop 1', title: 'Museum or landmark visit', description: 'Spend unhurried time at one key place rather than rushing through many.' },
+            { time: 'Stop 2', title: 'Culture beyond the gallery', description: 'Continue to Katara, Msheireb or a heritage area that complements the first stop.' },
+            { time: 'Finish', title: 'Waterfront or market close', description: 'End with a Corniche view or free time in the market lanes.' }
+        ],
+        bestFor: 'Culture-led itineraries, families and returning visitors'
+    },
+    {
+        slug: 'dhow-and-waterfront',
+        title: 'Dhow & waterfront evening',
+        category: 'Waterfront',
+        duration: '2–3 hours',
+        pickup: 'Central Doha pickup',
+        image: '/images/dest/lofoten.jpg',
+        imageAlt: 'Waterfront scenery used as a local preview image',
+        summary: 'See the Doha waterfront at a slower pace, with a traditional dhow experience and time for the skyline after dark.',
+        overview: 'This evening-focused experience is a softer counterpart to a busy day of sightseeing. It centres on the Corniche and waterfront views, with an optional route that can begin or end near Souq Waqif.',
+        highlights: ['Evening waterfront atmosphere', 'Traditional dhow setting', 'Corniche and skyline views', 'Easy pairing with a city tour'],
+        itinerary: [
+            { time: 'Start', title: 'Meet by the waterfront', description: 'Begin from an agreed central Doha location before heading to the Corniche.' },
+            { time: 'Stop 1', title: 'Settle into the waterfront', description: 'Take in the skyline and choose the best moment for photos before dusk.' },
+            { time: 'Stop 2', title: 'Dhow experience', description: 'Spend time on the water and view the city from the bay.' },
+            { time: 'Finish', title: 'Continue your evening', description: 'Return to your hotel or continue towards dinner and Souq Waqif.' }
+        ],
+        bestFor: 'Couples, families and evening arrivals'
+    },
+    {
+        slug: 'private-transfers',
+        title: 'Private transfers',
+        category: 'Transportation',
+        duration: 'By itinerary',
+        pickup: 'Airport, hotel or address',
+        image: '/images/contact-coast.jpg',
+        imageAlt: 'A road scene used as a local preview image',
+        summary: 'Plan point-to-point transport for arrivals, hotel changes, sightseeing days or a group schedule.',
+        overview: 'Transport deserves its own planning rather than being an afterthought. Use this preview service to describe the journey, guest count, luggage and any timing constraints so the right vehicle category can be discussed.',
+        highlights: ['Airport and hotel journeys', 'Point-to-point private transport', 'Sightseeing-day transport', 'Group schedule planning'],
+        itinerary: [
+            { time: 'Step 1', title: 'Share the journey details', description: 'Provide pickup, destination, travel date, guest count and luggage needs.' },
+            { time: 'Step 2', title: 'Match the vehicle category', description: 'Discuss a suitable option for the journey rather than choosing by guesswork.' },
+            { time: 'Step 3', title: 'Confirm the pickup plan', description: 'Set the exact address, time and practical arrival instructions.' },
+            { time: 'Step 4', title: 'Travel with the day covered', description: 'Use the same planning flow for one journey or a full day of movements.' }
+        ],
+        bestFor: 'Arrivals, hotel transfers, families and small groups'
+    }
+]
+
+export const qatarServicePillars = [
+    {
+        title: 'Private experiences',
+        description: 'Shape a Doha or desert outing around the pace, pickup point and interests of your group.',
+        icon: 'compass' as const
+    },
+    {
+        title: 'Layovers made useful',
+        description: 'Plan a compact route that respects flight timing instead of treating your connection as wasted time.',
+        icon: 'clock' as const
+    },
+    {
+        title: 'Journeys coordinated',
+        description: 'Make private transfers and multi-stop days a first-class part of the itinerary.',
+        icon: 'route' as const
+    },
+    {
+        title: 'Clear next steps',
+        description: 'Start with your date, pickup point and group size, then discuss the right service before booking.',
+        icon: 'heart' as const
+    }
+]
+
+export const qatarTrustPillars = [
+    {
+        title: '5-Star Rated',
+        description: '88+ five-star Google reviews',
+        icon: 'award' as const
+    },
+    {
+        title: 'Expert Local Guides',
+        description: 'Professional English speaking guides',
+        icon: 'language' as const
+    },
+    {
+        title: 'Free Hotel Pickup',
+        description: 'From any hotel in Doha',
+        icon: 'pin' as const
+    },
+    {
+        title: 'Instant WhatsApp Booking',
+        description: 'Confirm your tour within 1 hour',
+        icon: 'message' as const
+    }
+]
+
+export const getQatarExperience = (slug: string): QatarExperience | undefined => {
+    return qatarExperiences.find((experience) => experience.slug === slug)
+}
+
+export interface QatarSampleReview {
+    name: string
+    country: string
+    month: string
+    title: string
+    text: string
+}
+
+export interface QatarTourDetail extends QatarExperience {
+    rating?: number
+    reviews?: number
+    stats?: { value: string, label: string }[]
+    gallery?: { image: string, imageAlt: string }[]
+    included?: string[]
+    excluded?: string[]
+    notes?: string[]
+    faqs?: QatarFaq[]
+    sampleReviews?: QatarSampleReview[]
+    relatedSlugs?: string[]
+}
+
+export const qatarTourPages: QatarTourDetail[] = [
+    {
+        slug: 'desert-safari-qatar',
+        title: 'Desert Safari Qatar',
+        category: 'Desert Safari',
+        duration: '4 hours',
+        pickup: 'Hotel, airport or cruise terminal',
+        image: '/images/experiences/desert-safari.jpg',
+        imageAlt: 'Dune bashing with a view of the desert and camels near Sealine, Qatar',
+        summary: 'The classic Qatar desert day — dune driving, camels and the Inland Sea at golden hour, door to door in about four hours.',
+        overview: 'Leave Doha behind for the southern sand sea in a 4×4 with an experienced desert driver. Cross the dunes near Sealine, stop for photographs and a camel encounter, then follow the sand down to Khor Al Adaid, the Inland Sea where dunes meet the Gulf. Choose the pace yourself — a calm scenic drive or the full spirited ride — and let the departure time chase the light you want, from early desert calm to a proper sunset finish.',
+        highlights: ['Dune driving with an experienced desert driver', 'Khor Al Adaid — the Inland Sea where dunes meet the Gulf', 'Camel stop, sandboarding and photo time', 'Private or shared 4×4 with door-to-door pickup'],
+        stats: [
+            { value: '4 hours', label: 'Door to door' },
+            { value: 'Private or shared', label: '4×4 with desert driver' },
+            { value: 'Khor Al Adaid', label: 'The Inland Sea' },
+            { value: 'Included', label: 'Hotel, airport or cruise pickup' }
+        ],
+        gallery: [
+            { image: '/images/experiences/desert-safari/inland-sea.jpg', imageAlt: 'Dunes running down to the tidal water of the Inland Sea at Khor Al Adaid' },
+            { image: '/images/experiences/desert-safari/dune-sunset.jpg', imageAlt: 'Evening light across the southern Qatar dunes' },
+            { image: '/images/experiences/desert-safari/camel-ride.jpg', imageAlt: 'A rider on a camel crossing the desert near the dune belt' },
+            { image: '/images/experiences/desert-safari/desert-meets-sea.jpg', imageAlt: 'Sand dunes meeting the shallow sea on the southern Qatar coast' }
+        ],
+        itinerary: [
+            { time: 'Start', title: 'Pickup from your location', description: 'Your driver collects you from your hotel, Hamad International Airport or the cruise terminal for the drive south to Sealine.' },
+            { time: 'Stop 1', title: 'Sealine preparation stop', description: 'A short pause to prepare the vehicle for the sand before entering the dune belt.' },
+            { time: 'Stop 2', title: 'Dune driving', description: 'Cross the southern sand sea with a driver who reads the terrain — calm and scenic, or the full spirited ride.' },
+            { time: 'Stop 3', title: 'Camels, sandboarding and photos', description: 'Time for a camel encounter, the sandboard and unhurried photographs in the open desert.' },
+            { time: 'Stop 4', title: 'Inland Sea', description: 'Reach Khor Al Adaid, the protected reserve where the dunes run into the Gulf.' },
+            { time: 'Finish', title: 'Return to Doha', description: 'Watch the light change on the drive back and finish at your original pickup point.' }
+        ],
+        bestFor: 'First-time visitors, families and thrill seekers',
+        included: [
+            'Hotel, airport or cruise-terminal pickup and drop-off',
+            '4×4 with air conditioning and desert driver',
+            'Camel stop and short camel ride',
+            'Sandboarding',
+            'Bottled drinking water',
+            'All permits for the protected reserve'
+        ],
+        excluded: [
+            'Meals and drinks beyond water',
+            'Quad biking and dune buggy rides (available at extra cost)',
+            'Personal purchases and gratuities',
+            'Anything not listed as included'
+        ],
+        notes: [
+            'Plan for roughly four hours door to door, a little more with heavy traffic or a long photo stop.',
+            'Dune driving involves sudden movement. It is not advised during pregnancy, or for guests with serious back, neck or heart conditions — ask us for a calmer scenic route instead.',
+            'The stop order can shift with tides, weather and desert conditions; the Inland Sea visit always stays in the plan.',
+            'Wear comfortable clothing and closed footwear, and bring sun protection from May to September when departures stay early or late.',
+            'Sunset departure times follow the season — we confirm your exact slot when you book.'
+        ],
+        faqs: [
+            {
+                question: 'How long does the desert safari take?',
+                answer: 'Around four hours door to door, including both pickups, the drive to Sealine, dune time and the Inland Sea stop. Leave a little extra margin in peak traffic or on the dates closest to national holidays.'
+            },
+            {
+                question: 'Is the tour private or shared?',
+                answer: 'Both are available. Shared safaris join other travellers in the 4×4 at the group rates in the price table, while a private booking reserves the vehicle and driver for your group only.'
+            },
+            {
+                question: 'Can you pick us up from the airport or cruise terminal?',
+                answer: 'Yes, when your schedule allows the full four hours. Share your flight or ship details and we will confirm the pickup window before you book.'
+            },
+            {
+                question: 'Who should skip the dune driving?',
+                answer: 'It is not advised during pregnancy, or for guests with serious back, neck or heart conditions. We can shape a calmer scenic route through the same reserve instead.'
+            },
+            {
+                question: 'When is the best season for a desert safari?',
+                answer: 'November to March brings the most comfortable temperatures for dunes and open drives. In summer, departures shift to early morning or late afternoon so the hottest hours stay off the route.'
+            }
+        ],
+        sampleReviews: [
+            {
+                name: 'Hana K.',
+                country: 'Germany',
+                month: 'March',
+                title: 'The Inland Sea at dusk',
+                text: 'Our driver kept the ride fun without ever feeling careless, and the Inland Sea at sunset was worth every bump. Pickup from our hotel was right on time.'
+            },
+            {
+                name: 'Marcus D.',
+                country: 'United Kingdom',
+                month: 'February',
+                title: 'Perfect for a short stay',
+                text: 'We booked as a family of five. A proper 4×4, an on-time pickup and a photo stop the children still talk about weeks later.'
+            },
+            {
+                name: 'Priya S.',
+                country: 'India',
+                month: 'January',
+                title: 'Calm drive, big views',
+                text: 'We asked for the gentler version of the dune route. Tea at the camel stop and the quiet at the Inland Sea were the best part of our trip.'
+            }
+        ],
+        relatedSlugs: ['doha-city-tour', 'doha-desert-combo', 'sunset-dhow-cruise'],
+        rating: 5.0,
+        reviews: 187
+    },
+    {
+        slug: 'doha-city-tour',
+        title: 'Doha City Tour with Hotel Pickup',
+        category: 'City Tours',
+        duration: '4 hours',
+        pickup: 'Hotel or airport pickup',
+        image: '/images/experiences/doha-city-tour.jpg',
+        imageAlt: 'The Doha Corniche waterfront with the West Bay skyline across the water',
+        summary: "Doha's essentials in four hours — the Corniche, Souq Waqif, The Pearl and the West Bay skyline with a local guide.",
+        overview: 'A private introduction to Doha that balances heritage markets, waterfront views and contemporary city landmarks. The order is shaped around your pickup point, pace and interests, so four hours cover more than any group bus itinerary.',
+        highlights: ['Souq Waqif and the Corniche', 'Katara Cultural Village', 'The Pearl waterfront', 'Flexible hotel or airport pickup'],
+        itinerary: [
+            { time: 'Start', title: 'Meet at your pickup point', description: 'Begin from your hotel, airport area or another confirmed point in Doha.' },
+            { time: 'Stop 1', title: 'Heritage and market lanes', description: 'Walk the lanes around Souq Waqif and pause for the places that interest you.' },
+            { time: 'Stop 2', title: 'Waterfront and city views', description: 'Follow the Corniche for a clear view of the bay and West Bay skyline.' },
+            { time: 'Finish', title: 'The Pearl or Katara', description: 'Choose The Pearl marina, Katara or a museum stop to close the route.' }
+        ],
+        bestFor: 'First-time visitors, families and short stays',
+        rating: 5.0,
+        reviews: 75
+    },
+    {
+        slug: 'museum-souq-waqif-tour',
+        title: 'Museum of Islamic Art & Souq Waqif Guided Tour',
+        category: 'Museums & Culture',
+        duration: '3–4 hours',
+        pickup: 'Hotel pickup',
+        image: '/images/experiences/museum-souq-waqif.jpg',
+        imageAlt: 'The Museum of Islamic Art on the Doha Corniche',
+        summary: "I. M. Pei's masterpiece and the old souq — Doha's two great cultural landmarks in one guided morning.",
+        overview: 'Pair the Museum of Islamic Art with the lanes of Souq Waqif in a single unhurried morning. A guided route through the galleries gives the collection context, before the souq brings spices, falcons and coffee back out into the street.',
+        highlights: ['Museum of Islamic Art galleries', 'Guided walk through Souq Waqif', 'Corniche views of the skyline', 'Coffee or karak stop in the souq'],
+        itinerary: [
+            { time: 'Start', title: 'Hotel pickup', description: 'Collected from your hotel for the short drive to the museum on the Corniche.' },
+            { time: 'Stop 1', title: 'Museum of Islamic Art', description: 'A guided visit through the galleries with time for the courtyard and bay views.' },
+            { time: 'Stop 2', title: 'Souq Waqif', description: 'Walk the restored market lanes with a guide, from the spice alley to the falcon souq.' },
+            { time: 'Finish', title: 'Karak and goodbyes', description: 'Close with a karak or Arabic coffee in the souq before returning to your hotel.' }
+        ],
+        bestFor: 'Culture-led visits, first-time visitors and photographers',
+    },
+    {
+        slug: 'sunset-dhow-cruise',
+        title: 'Sunset Dhow Cruise Doha',
+        category: 'Dhow Cruises',
+        duration: '2 hours',
+        pickup: 'Central Doha meeting point',
+        image: '/images/experiences/sunset-dhow.png',
+        imageAlt: 'A traditional dhow on the water in front of the Doha skyline at sunset',
+        summary: 'A traditional wooden dhow, the skyline turning gold and the call to prayer over the water — Doha Bay at dusk.',
+        overview: 'This evening cruise is a softer counterpart to a busy day of sightseeing. Board a traditional wooden dhow beside the Corniche and watch the West Bay skyline change colour, with an easy walk to Souq Waqif afterwards.',
+        highlights: ['Traditional wooden dhow', 'Corniche and West Bay skyline views', 'Golden-hour and after-dark photo moments', 'Easy pairing with Souq Waqif'],
+        itinerary: [
+            { time: 'Start', title: 'Meet by the waterfront', description: 'Arrive at the dhow harbour beside the Corniche before departure.' },
+            { time: 'Stop 1', title: 'Sail Doha Bay', description: 'Settle on deck as the dhow pulls away from the harbour and the skyline opens up.' },
+            { time: 'Stop 2', title: 'Skyline at dusk', description: 'Watch the lights come on across West Bay from the water.' },
+            { time: 'Finish', title: 'Back at the harbour', description: 'Return to the Corniche, with Souq Waqif a short walk away for dinner.' }
+        ],
+        bestFor: 'Couples, families and evening arrivals',
+    },
+    {
+        slug: 'doha-desert-combo',
+        title: 'Doha City Tour & Desert Safari Combo',
+        category: 'Packages',
+        duration: '10 hours',
+        pickup: 'Hotel pickup',
+        image: '/images/experiences/doha-desert-combo.jpg',
+        imageAlt: 'The Inland Sea at Khor Al Adaid where dunes meet the Gulf',
+        summary: 'The complete Qatar day — skyline and souq before lunch, dunes and the Inland Sea by sunset.',
+        overview: 'One private vehicle, one driver and the two sides of Qatar in a single day. Take in the Corniche, Souq Waqif and The Pearl in the morning, pause for lunch, then head south for dune driving and the sunset at the Inland Sea. Built for short stays that want everything.',
+        highlights: ['City tour and desert safari in one day', 'Private vehicle and driver throughout', 'Doha skyline, souq and The Pearl', 'Dune bashing and Inland Sea sunset'],
+        itinerary: [
+            { time: 'Start', title: 'Morning pickup', description: 'Collected from your hotel for the city half of the day.' },
+            { time: 'Stop 1', title: 'City landmarks', description: 'Souq Waqif, the Corniche, Katara and The Pearl with a local guide.' },
+            { time: 'Stop 2', title: 'Lunch break', description: 'A pause for lunch in Doha before the drive south to Sealine.' },
+            { time: 'Stop 3', title: 'Desert and Inland Sea', description: 'Dune bashing, a camel stop and sunset over Khor Al Adaid.' },
+            { time: 'Finish', title: 'Return to Doha', description: 'Back at your hotel in the evening with the full Qatar day behind you.' }
+        ],
+        bestFor: 'Short stays, first-time visitors and best-value planning',
+    },
+    {
+        slug: 'national-museum-katara-lusail',
+        title: 'National Museum of Qatar, Katara & Lusail Tour',
+        category: 'Museums & Culture',
+        duration: '5 hours',
+        pickup: 'Free pickup from any Doha hotel',
+        image: '/images/experiences/national-museum-katara.jpg',
+        imageAlt: 'The National Museum of Qatar beside the Corniche',
+        summary: "Follow Qatar from pearl and desert past to tomorrow-city — the desert-rose museum, Katara's cultural quarter and the new skyline of Lusail.",
+        overview: 'Five hours that trace one story: how a pearl-diving peninsula grew into a skyline nobody drew a decade ago. Start inside the National Museum of Qatar, whose interlocking discs rise like a desert rose around the old palace, and let your guide walk you from the natural history of the Gulf straight through to the World Cup era. Then cross to Katara Cultural Village for its amphitheatre, tiled mosques and quiet waterfront, and finish in Lusail — the marina, the boulevard and the towers shaped for films. English or Arabic, shared or private, picked up and dropped back at your own door.',
+        highlights: [
+            'National Museum of Qatar with entry included',
+            'Katara Cultural Village walk',
+            'Lusail Boulevard, marina and Lusail Stadium photo stop',
+            'Free hotel pickup and drop-off in Doha'
+        ],
+        stats: [
+            { value: '5 hours', label: 'Door to door' },
+            { value: 'Shared or private', label: 'With a licensed guide' },
+            { value: 'National Museum of Qatar', label: 'Entry included' },
+            { value: 'Included', label: 'Hotel pickup in Doha' }
+        ],
+        gallery: [
+            { image: '/images/tours/national-museum-katara-lusail/national-museum-of-qatar.jpg', imageAlt: 'The interlocking desert-rose discs of the National Museum of Qatar under a clear sky in Doha' },
+            { image: '/images/tours/national-museum-katara-lusail/katara-mosque.jpg', imageAlt: 'Ornate domed exterior of the Katara Mosque at Katara Cultural Village in Doha' },
+            { image: '/images/tours/national-museum-katara-lusail/lusail-marina-skyline.jpg', imageAlt: 'High-rise skyline of Lusail seen across the marina district of Lusail City, Qatar' },
+            { image: '/images/experiences/national-museum-katara.jpg', imageAlt: 'The National Museum of Qatar beside the Corniche' }
+        ],
+        itinerary: [
+            { time: 'Start', title: 'Hotel pickup in Doha', description: 'Your driver and guide collect you from your hotel and set off along the Corniche for the museum on the bay.' },
+            { time: 'Stop 1', title: 'National Museum of Qatar', description: 'A guided visit of about two hours through the desert-rose galleries, from pearling years to the oil era and beyond.' },
+            { time: 'Stop 2', title: 'Katara Cultural Village', description: "Walk the amphitheatre, the mosques and the waterfront of Katara at your group's pace." },
+            { time: 'Stop 3', title: 'Lusail skyline stops', description: 'Photo stops along the Lusail Boulevard and marina, with the Katara Towers and Lusail Stadium in view.' },
+            { time: 'Stop 4', title: 'Optional observation deck', description: 'If you fancy the view from above, an observation-deck ticket in Lusail Tower can be added on request.' },
+            { time: 'Finish', title: 'Drop-off at your hotel', description: 'Your guide returns you to your Doha hotel with the whole Qatar story, old and new, behind you.' }
+        ],
+        bestFor: 'Culture-led visits, first-time visitors and design lovers',
+        included: [
+            'Free hotel pickup and drop-off anywhere in Doha',
+            'Knowledgeable guide in English or Arabic',
+            'National Museum of Qatar entry ticket',
+            'Bottled drinking water'
+        ],
+        excluded: [
+            'Meals and drinks beyond bottled water',
+            'Optional Lusail Tower observation-deck ticket',
+            'Personal expenses and gratuities'
+        ],
+        notes: [
+            'Departure is around 09:00 and the whole route takes about five hours door to door, a little longer with midday traffic.',
+            'The National Museum visit walks roughly two hours across several floors; expect standing time and take the lifts when you prefer.',
+            'Katara and the Lusail boulevard involve outdoor walking — sun protection matters most between May and September.',
+            'Museum entry for non-residents is charged by the venue and is already covered by this tour.',
+            'The stopping order shifts a little with traffic, prayer times and opening hours; the museum visit always stays anchored in the morning.'
+        ],
+        faqs: [
+            {
+                question: 'How long is the tour and when does it start?',
+                answer: 'Plan for about five hours door to door, starting with pickup around 09:00 so the museum visit sits in the coolest part of the morning.'
+            },
+            {
+                question: 'Is the museum ticket really included?',
+                answer: 'Yes. The National Museum of Qatar charges entry for non-resident visitors and that ticket is part of the tour. The optional observation-deck ticket in Lusail is the only extra on the whole route.'
+            },
+            {
+                question: 'Is this a shared tour or private?',
+                answer: 'Both formats run. A shared booking joins other travellers in the vehicle, while the private option keeps the car and guide exclusively for your group for the entire five hours.'
+            },
+            {
+                question: 'Can infants come along?',
+                answer: 'Yes. Infants under three travel free, and the route is fully urban, so pushchairs are no problem at the museum or Katara.'
+            },
+            {
+                question: 'Do I get picked up at my hotel?',
+                answer: 'Yes, pickup from any hotel in Doha is free, and drop-off is back at the same door. Airport and cruise-terminal pickups can be arranged on request.'
+            },
+            {
+                question: 'What languages does the guide speak?',
+                answer: 'The tour runs in English or Arabic — tell us which you prefer when you book, or mention it in your enquiry and we will match the guide.'
+            }
+        ],
+        sampleReviews: [
+            {
+                name: 'A. Fontaine',
+                country: 'France',
+                month: 'November',
+                title: 'Three worlds in five hours',
+                text: 'The museum alone would have been worth the morning, but seeing Katara and then Lusail straight after made the whole story click. Our guide knew exactly which gallery scenes to slow down for.'
+            },
+            {
+                name: 'R. Al-Mansoori',
+                country: 'Saudi Arabia',
+                month: 'January',
+                title: 'Great with both parents and kids',
+                text: 'We did it as a private tour with two generations in the car and everyone stayed engaged. The boulevard photo stop at the end was a calm way to finish.'
+            }
+        ],
+        relatedSlugs: ['museum-souq-waqif-tour', 'doha-city-tour', 'doha-desert-combo'],
+        rating: 5.0,
+        reviews: 7
+    },
+    {
+        slug: 'villaggio-gondola-tour',
+        title: 'Doha City Tour with Villaggio Mall & Gondola Ride',
+        category: 'City Tours',
+        duration: '4–5 hours',
+        pickup: 'Hotel, airport or cruise terminal',
+        image: '/images/experiences/villaggio-gondola.jpg',
+        imageAlt: 'Gondola ride through the Venetian canals of Villaggio Mall',
+        summary: 'Souq Waqif, the Corniche, The Pearl and Lusail, then a gondola through the indoor canals of Villaggio Mall — half a day, door to door.',
+        overview: "Half a day is enough to meet Doha properly when someone else does the driving. You are collected from your hotel lobby, the airport arrivals gate or the cruise terminal and travel in an air-conditioned vehicle with an English-speaking guide. The route runs through the city in one loop: the spice stalls and falcon souq of Souq Waqif, a Corniche photo stop under the West Bay towers, the yacht marinas and Venice-style Qanat Quartier at The Pearl, and the Katara Towers and promenades of Lusail. The finish is deliberately different: inside Villaggio Mall, a gondola glides along an indoor Venetian canal, included in your tour. Choose shared or private, and we drop you back where you began.",
+        highlights: [
+            'Gondola ride along the Villaggio Mall canal — ticket included',
+            'Souq Waqif spice stalls, handicrafts and the falcon souq',
+            'The Pearl marinas and Lusail waterfront photo stops',
+            'Hotel, airport or cruise-terminal pickup and drop-off'
+        ],
+        stats: [
+            { value: '4–5 hours', label: 'Door to door' },
+            { value: 'Shared or private', label: 'Air-conditioned vehicle and guide' },
+            { value: 'Villaggio Mall gondola', label: 'Ticket included, last stop' },
+            { value: 'Included', label: 'Hotel, airport or cruise pickup' }
+        ],
+        gallery: [
+            { image: '/images/experiences/villaggio-gondola.jpg', imageAlt: 'Gondola ride through the Venetian canals of Villaggio Mall' },
+            { image: '/images/tours/villaggio-gondola-tour/doha-corniche-skyline.jpg', imageAlt: "Doha's West Bay skyline seen across the water from the Corniche waterfront promenade" },
+            { image: '/images/tours/villaggio-gondola-tour/villaggio-mall-interior.jpg', imageAlt: 'Brightly painted building facades lining an interior arcade of Villaggio Mall in Doha' },
+            { image: '/images/tours/villaggio-gondola-tour/villaggio-mall-corridor.jpg', imageAlt: 'Colorful Italian-style corridor with shops inside Villaggio Mall in Doha' }
+        ],
+        itinerary: [
+            { time: 'Start', title: 'Pickup at your door', description: 'Collected from your Doha hotel lobby, airport arrivals gate 4 or Cruise Terminal 1, and set off in an air-conditioned vehicle with your guide.' },
+            { time: 'Stop 1', title: 'Souq Waqif', description: 'About 45 minutes in the restored market lanes — spice stalls, perfumes, handicrafts and the falcon souq set in traditional Qatari architecture.' },
+            { time: 'Stop 2', title: 'Doha Corniche photo stop', description: 'Around a 20-minute pause on the waterfront for the sweep of the bay and the West Bay skyline across the water.' },
+            { time: 'Stop 3', title: 'The Pearl-Qatar', description: 'Roughly 40 minutes among the marinas and yachts, with time to walk the Venice-style canals of the Qanat Quartier.' },
+            { time: 'Stop 4', title: 'Lusail', description: 'About 50 minutes for the Katara Towers, the waterfront promenades and a photo stop in the Lusail Stadium area.' },
+            { time: 'Finish', title: 'Villaggio Mall gondola ride', description: 'End inside the mall, where Italian-style indoor streets run beneath a painted sky — your included gondola ticket covers the drift along the Venetian canal before drop-off.' }
+        ],
+        bestFor: 'Families, first-time visitors and mall-and-city days in one',
+        included: [
+            'Pickup and drop-off — hotel, Hamad International Airport or Doha Cruise Terminal',
+            'Air-conditioned vehicle',
+            'English-speaking guide',
+            'Villaggio Mall gondola ride ticket',
+            'Bottled drinking water'
+        ],
+        excluded: [
+            'Meals and drinks beyond bottled water',
+            'Shopping and personal expenses',
+            'Anything not listed as included'
+        ],
+        notes: [
+            'Plan for four to five hours door to door; the stop order can shift with traffic, weather and mall opening hours, though the gondola ride always closes the route.',
+            'Souq Waqif, The Pearl and Lusail all involve walking outdoors, so comfortable shoes and sun protection matter most between May and September.',
+            'Mall opening hours do not affect morning departures, but if your tour runs late in the day the gondola can pause briefly for shops to open.',
+            'Cancellations are accepted up to 24 hours before departure.',
+            'Tell us your pickup point — hotel, airport or cruise terminal — when you enquire, and we confirm the exact window for your date.'
+        ],
+        faqs: [
+            {
+                question: 'How long does the tour take and when does it start?',
+                answer: 'Plan for four to five hours door to door. Your exact pickup time is confirmed when you book, based on your location and the season.'
+            },
+            {
+                question: 'Can you pick me up from the airport or cruise port?',
+                answer: 'Yes. Collection is offered from your Doha hotel lobby, Hamad International Airport arrivals gate 4 or Doha Cruise Terminal 1, and the drop-off returns you to the hotel, the airport or the port — whichever suits your plans.'
+            },
+            {
+                question: 'Is the gondola ride really included?',
+                answer: 'Yes. The gondola ticket along the indoor canal at Villaggio Mall is part of the tour, and it is the final stop before drop-off. Nothing extra is needed at the mall.'
+            },
+            {
+                question: 'Is this a private tour or a shared group departure?',
+                answer: 'Both run. A shared booking joins other travellers in the vehicle, while the private option gives your group its own vehicle and guide for the whole route.'
+            },
+            {
+                question: 'How much walking is involved?',
+                answer: 'The souq, The Pearl and Lusail are walking stops, taken at a pace that suits your group, while the Corniche is a short photo stop and the mall is level and air-conditioned. Comfortable shoes are enough for the whole route.'
+            },
+            {
+                question: 'Can children join?',
+                answer: 'Yes — the route is easy with children throughout, and the gondola is a calm ride inside the mall that younger guests usually enjoy most. Mention your group when you enquire so the seating works.'
+            }
+        ],
+        sampleReviews: [
+            {
+                name: 'M. Reyes',
+                country: 'Philippines',
+                month: 'October',
+                title: 'A little bit of everything',
+                text: 'Falcon souq in the morning, skyline photos on the Corniche and then a gondola inside a mall — our kids could not pick a favourite. The guide kept the whole afternoon moving without ever rushing us.'
+            },
+            {
+                name: 'J. Whitfield',
+                country: 'Canada',
+                month: 'March',
+                title: 'Smart way to end a city tour',
+                text: 'Villaggio might be the strangest, most delightful finish to any city tour we have done — painted skies inside. Pickup at gate 4 was exactly on time and the car was spotless.'
+            }
+        ],
+        relatedSlugs: ['doha-city-tour', 'museum-souq-waqif-tour', 'sunset-dhow-cruise'],
+        rating: 5.0,
+        reviews: 6
+    }
+]
+
+export const getQatarTourPage = (slug: string): QatarTourDetail | undefined => {
+    return qatarTourPages.find((tour) => tour.slug === slug)
+}
+
+export interface QatarTour {
+    slug: string
+    category: string
+    badge?: string
+    title: string
+    duration: string
+    pickupIncluded?: boolean
+    rating?: number
+    reviews?: number
+    description: string
+    image: string
+    imageAlt: string
+    href: string
+}
+
+export const featuredQatarTours: QatarTour[] = [
+    {
+        slug: 'desert-safari-qatar',
+        category: 'Desert Safari',
+        badge: 'Bestseller',
+        title: 'Desert Safari Qatar',
+        duration: '4 hours',
+        pickupIncluded: true,
+        rating: 5.0,
+        reviews: 187,
+        description: 'The #1 experience in Qatar — dunes, camels and the Inland Sea at golden hour.',
+        image: '/images/experiences/desert-safari.jpg',
+        imageAlt: 'Dune bashing with a view of the desert and camels near Sealine, Qatar',
+        href: 'desert-safari-qatar'
+    },
+    {
+        slug: 'doha-city-tour',
+        category: 'City Tours',
+        badge: 'Top rated',
+        title: 'Doha City Tour with Hotel Pickup',
+        duration: '4 hours',
+        pickupIncluded: true,
+        rating: 5.0,
+        reviews: 75,
+        description: "Doha's essentials in four hours — skyline, souq, Pearl and Corniche with a local guide.",
+        image: '/images/experiences/doha-city-tour.jpg',
+        imageAlt: 'The Doha Corniche waterfront with the West Bay skyline across the water',
+        href: 'doha-city-tour'
+    },
+    {
+        slug: 'doha-desert-combo',
+        category: 'Packages',
+        badge: 'Best value',
+        title: 'Doha City Tour & Desert Safari Combo',
+        duration: '10 hours',
+        pickupIncluded: true,
+        description: 'The complete Qatar day — skyline and souq before lunch, dunes and Inland Sea by sunset.',
+        image: '/images/experiences/doha-desert-combo.jpg',
+        imageAlt: 'The Inland Sea at Khor Al Adaid where dunes meet the Gulf',
+        href: 'doha-desert-combo'
+    },
+    {
+        slug: 'overnight-desert-safari',
+        category: 'Desert Safari',
+        title: 'Overnight Desert Safari Qatar',
+        duration: '18 hours',
+        pickupIncluded: true,
+        description: 'Sunset, a BBQ under the stars, and sunrise over the Inland Sea from your own tent.',
+        image: '/images/experiences/overnight-desert.jpg',
+        imageAlt: 'A desert camp at dusk among dunes',
+        href: 'desert-and-inland-sea'
+    },
+    {
+        slug: 'sunset-dhow-cruise',
+        category: 'Dhow Cruises',
+        title: 'Sunset Dhow Cruise Doha',
+        duration: '2 hours',
+        description: 'A traditional wooden dhow, the skyline turning gold, and the call to prayer over the water.',
+        image: '/images/experiences/sunset-dhow.png',
+        imageAlt: 'A traditional dhow on the water in front of the Doha skyline at sunset',
+        href: 'sunset-dhow-cruise'
+    },
+    {
+        slug: 'doha-layover-tour',
+        category: 'Layover',
+        title: 'Doha Layover Tour',
+        duration: '4 hours',
+        pickupIncluded: true,
+        rating: 5.0,
+        reviews: 10,
+        description: 'Turn a Qatar Airways stopover into a real visit — private car, pickup from Airport, back with time to spare.',
+        image: '/images/experiences/doha-layover.jpg',
+        imageAlt: 'A traveller with a sunhat looking over the Doha skyline',
+        href: 'layover-doha'
+    }
+]
+
+export const remainingQatarTours: QatarTour[] = [
+    {
+        slug: 'museum-souq-waqif-tour',
+        category: 'Museums & Culture',
+        title: 'Museum of Islamic Art & Souq Waqif Guided Tour',
+        duration: '3–4 hours',
+        pickupIncluded: true,
+        description: "I. M. Pei's masterpiece and the old souq — Doha's two great cultural landmarks in one morning.",
+        image: '/images/experiences/museum-souq-waqif.jpg',
+        imageAlt: 'The Museum of Islamic Art on the Doha Corniche',
+        href: 'museum-souq-waqif-tour'
+    },
+    {
+        slug: 'snow-dunes-qatar',
+        category: 'Packages',
+        badge: 'Private only',
+        title: 'Snow Dunes Qatar Tickets with Private Transfer',
+        duration: '2.5–4 hours',
+        pickupIncluded: true,
+        description: 'Real snow in Qatar at -4°C – Snow Dunes tickets with a private car from your hotel, the airport or Doha cruise port.',
+        image: '/images/experiences/snow-dunes.webp',
+        imageAlt: 'Snow Dunes indoor snow park in Doha',
+        href: 'layover-doha'
+    },
+    {
+        slug: 'villaggio-gondola-tour',
+        category: 'City Tours',
+        title: 'Doha City Tour with Villaggio Mall & Gondola Ride',
+        duration: '4–5 hours',
+        pickupIncluded: true,
+        rating: 5.0,
+        reviews: 6,
+        description: "See Souq Waqif, the Corniche, The Pearl and Lusail, then glide through Villaggio's Venetian canals on a gondola, all in your own private car.",
+        image: '/images/experiences/villaggio-gondola.jpg',
+        imageAlt: 'Gondola ride through the Venetian canals of Villaggio Mall',
+        href: 'doha-city-discovery'
+    },
+    {
+        slug: 'national-museum-katara-lusail',
+        category: 'Museums & Culture',
+        title: 'National Museum of Qatar, Katara & Lusail Tour',
+        duration: '5 hours',
+        pickupIncluded: true,
+        description: "Explore Qatar's transformation — the desert-rose National Museum, Katara Cultural Village and Lusail's boulevard and Katara Towers in one tour.",
+        image: '/images/experiences/national-museum-katara.jpg',
+        imageAlt: 'The National Museum of Qatar beside the Corniche',
+        href: 'culture-and-museums'
+    },
+    {
+        slug: 'west-coast-camel-race-track',
+        category: 'Museums & Culture',
+        title: 'West Coast & Camel Race Track Private Tour',
+        duration: '4 hours',
+        pickupIncluded: true,
+        description: "Leave the skyline behind for Qatar's wild west: camels in training at Al Shahaniya, the limestone coast of Zekreet and Richard Serra's giant steel plates in the desert.",
+        image: '/images/experiences/west-coast-camels.jpg',
+        imageAlt: 'Camels training at the Al Shahaniya race track',
+        href: 'culture-and-museums'
+    },
+    {
+        slug: 'north-qatar-half-day',
+        category: 'Museums & Culture',
+        title: 'North Qatar Half-Day Private Tour',
+        duration: '5 hours',
+        pickupIncluded: true,
+        rating: 5.0,
+        reviews: 9,
+        description: "Trade the skyline for Qatar's old north: the UNESCO-listed Al Zubarah Fort, the mangroves of Purple Island and the fishing harbour of Al Khor, in your own private vehicle.",
+        image: '/images/experiences/north-qatar-zubarah.jpg',
+        imageAlt: 'Al Zubarah Fort in north Qatar',
+        href: 'culture-and-museums'
+    }
+]
+
+export interface QatarVehicle {
+    label: string
+    title: string
+    description: string
+    image: string
+    imageAlt: string
+}
+
+export interface QatarFaq {
+    question: string
+    answer: string
+}
+
+export const qatarFaqs: QatarFaq[] = [
+    {
+        question: 'Is Qatar safe for travellers?',
+        answer: 'Yes. Qatar is regularly listed among the world\'s safest destinations and street crime is very low. Visitors travelling alone — including women travelling solo — often say they feel at ease exploring Doha\'s Corniche and the souq after dark.'
+    },
+    {
+        question: 'When is the best time to visit Qatar?',
+        answer: 'The comfortable season runs from November to March, when daytime temperatures look at 20–28°C — ideal for desert trips and walking tours. From June to September the heat is intense, so we schedule early-morning and evening departures during those months.'
+    },
+    {
+        question: 'Do I need a visa for Qatar?',
+        answer: 'Nationals of more than 95 countries can enter visa-free on arrival and stay between 30 and 90 days. Passengers from other countries can apply for a Hayya visa online, and some transit travellers flying Qatar Airways qualify for a free transit visa.'
+    },
+    {
+        question: 'What should I wear in Qatar?',
+        answer: 'Light and modest clothing works best — cover shoulders and knees when visiting souqs, mosques and government buildings. Swimwear is perfectly acceptable at hotel pools and private beaches, and a light layer is handy for cool desert evenings in winter.'
+    },
+    {
+        question: 'Can I leave the airport during a layover?',
+        answer: 'Yes, if you have at least six hours between flights. Most nationalities can enter without a visa for a short stay. Our layover route meets you at arrivals and gets you back to departures two hours before your flight.'
+    }
+]
+
+export const qatarVehicles: QatarVehicle[] = [
+    {
+        label: 'Executive',
+        title: 'Sedans',
+        description: 'Airport, chauffeur and business journeys.',
+        image: '/images/fleet/sedan.png',
+        imageAlt: 'A black executive sedan photographed at a three-quarter angle'
+    },
+    {
+        label: 'Versatile',
+        title: 'SUVs',
+        description: 'Private journeys, tours and family travel.',
+        image: '/images/fleet/suv.png',
+        imageAlt: 'A black luxury SUV photographed at a three-quarter angle'
+    },
+    {
+        label: 'Families & groups',
+        title: 'Vans & MPVs',
+        description: 'Comfortable transportation for smaller groups.',
+        image: '/images/fleet/van.png',
+        imageAlt: 'A luxury passenger van photographed at a three-quarter angle'
+    },
+    {
+        label: 'Group transport',
+        title: 'Minibuses & Coaches',
+        description: 'Event, delegation and larger group transport.',
+        image: '/images/fleet/coach.png',
+        imageAlt: 'A white touring coach photographed at a three-quarter angle'
+    }
+]
