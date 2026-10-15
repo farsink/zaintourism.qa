@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { ChevronDown, Menu, X } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
+import { Footer } from '@/components/site/footer'
 import { Logo } from '@/components/site/logo'
 import { PillLink } from '@/components/site/pill'
 import { WhatsAppBrandIcon } from '@/components/sites/qatar-preview/whatsapp-brand-icon'
@@ -77,6 +78,16 @@ export const QatarPreviewLayout: FC<QatarPreviewLayoutProps> = ({
     const navigation = getQatarPreviewNavigation(basePath)
     const isRootHomepage = basePath === ''
     const navigationLabel = isRootHomepage ? 'Main navigation' : 'Preview navigation'
+    const footerGroups = [
+        {
+            title: 'Explore',
+            items: navigation.filter((item) => ['Tours', 'Services'].includes(item.label))
+        },
+        {
+            title: 'Plan your day',
+            items: navigation.filter((item) => ['About us', 'Contact'].includes(item.label))
+        }
+    ]
 
     return (
         <div className='flex min-h-screen flex-col bg-background'>
@@ -244,26 +255,16 @@ export const QatarPreviewLayout: FC<QatarPreviewLayoutProps> = ({
                 {children}
             </main>
 
-            <footer className='bg-ink text-white'>
-                <div className='mx-auto flex w-full max-w-[1440px] flex-col gap-7 px-5 py-12 sm:px-8 md:flex-row md:items-end md:justify-between lg:px-12'>
-                    <div className='flex flex-col gap-4'>
-                        <Logo href={basePath || '/'} name='Zain Tourism' tone='light' />
-                        <p className='max-w-sm text-[14px] leading-relaxed text-white/55'>
-                            {isRootHomepage
-                                ? 'Private Qatar travel planning for city experiences, desert days, layovers and onward journeys.'
-                                : 'Qatar travel planning preview. Service descriptions and contact actions are local examples pending business review.'}
-                        </p>
-                    </div>
-
-                    <div className='flex flex-wrap gap-x-6 gap-y-3 text-[14px] text-white/65'>
-                        {navigation.slice(1).map((item) => (
-                            <Link key={item.href} href={item.href} className='transition-colors hover:text-white'>
-                                {item.label}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </footer>
+            <Footer
+                name='Zain Tourism'
+                homeHref={basePath || '/'}
+                contactHref={contactHref}
+                groups={footerGroups}
+                description={isRootHomepage
+                    ? 'Private Qatar travel planning for city experiences, desert days, layovers and onward journeys.'
+                    : 'Qatar travel planning preview. Service descriptions and contact actions are local examples pending business review.'}
+                tagline='Thoughtful days in Qatar, planned around you.'
+            />
         </div>
     )
 }
