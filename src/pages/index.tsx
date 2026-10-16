@@ -1,8 +1,9 @@
 import type { FC, ReactNode } from 'react'
 
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image, { getImageProps } from 'next/image'
 import { ArrowUpRight, CarFront, Clock, Landmark, Mail, MapPin, Mountain, Phone, UsersRound, Waves } from 'lucide-react'
 import { PillButton, PillLink } from '@/components/site/pill'
 import { cn } from '@/lib/utils'
@@ -99,6 +100,23 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
     const contactHref = `${detailBasePath}/contact#enquiry`
     const serviceCards = getServiceCards(basePath, detailBasePath)
 
+    const heroCommon = {
+        alt: 'A luxury chauffeur van in front of the Lusail towers at sunset in Qatar',
+        fill: true,
+        sizes: '100vw',
+        className: 'slow-pan object-cover'
+    }
+
+    const { props: { srcSet: heroDesktopSrcSet } } = getImageProps({
+        ...heroCommon,
+        src: '/images/zain-tourism-hero.png'
+    })
+
+    const { props: { srcSet: heroMobileSrcSet, ...heroImgProps } } = getImageProps({
+        ...heroCommon,
+        src: '/images/zain-tourism-hero-portrait.jpg'
+    })
+
     return (
         <QatarPreviewLayout headerVariant='overlay' basePath={basePath} contactHref={contactHref}>
             <Seo
@@ -108,15 +126,32 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
                 ogImage='/images/zain-tourism-hero.png'
             />
 
-            <section className='relative isolate min-h-[100svh] overflow-hidden bg-ink'>
-                <Image
-                    src='/images/zain-tourism-hero.png'
-                    alt='A luxury chauffeur van in front of the Lusail towers at sunset in Qatar'
-                    fill
-                    priority
-                    sizes='100vw'
-                    className='slow-pan object-cover'
+            <Head>
+                <link
+                    rel='preload'
+                    as='image'
+                    imageSrcSet={heroMobileSrcSet}
+                    imageSizes='100vw'
+                    media='(max-width: 639px)'
+                    fetchPriority='high'
                 />
+                <link
+                    rel='preload'
+                    as='image'
+                    imageSrcSet={heroDesktopSrcSet}
+                    imageSizes='100vw'
+                    media='(min-width: 640px)'
+                    fetchPriority='high'
+                />
+            </Head>
+
+            <section className='relative isolate min-h-[100svh] overflow-hidden bg-ink'>
+                <picture>
+                    <source media='(max-width: 639px)' srcSet={heroMobileSrcSet} />
+                    <source media='(min-width: 640px)' srcSet={heroDesktopSrcSet} />
+
+                    <img {...heroImgProps} fetchPriority='high' />
+                </picture>
 
                 <div className='absolute inset-0 bg-gradient-to-b from-ink/50 via-ink/10 to-ink/55' />
 
