@@ -152,7 +152,7 @@ const QatarServices: FC = (): ReactNode => {
                 />
                 <div className='absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/25 to-ink/85' />
 
-                <div className='relative mx-auto flex min-h-[88svh] w-full max-w-[1440px] flex-col justify-end px-5 pb-12 pt-28 sm:px-8 lg:px-12 lg:pb-16'>
+                <div className='relative mx-auto flex min-h-[88svh] w-full max-w-[1440px] flex-col justify-end px-5 pb-8 pt-24 sm:px-8 sm:pb-12 sm:pt-28 lg:px-12 lg:pb-16'>
                     <nav aria-label='Breadcrumb' className='mb-auto pt-6'>
                         <ol className='flex flex-wrap items-center gap-2 text-[13px] text-white/60'>
                             <li>
@@ -167,7 +167,7 @@ const QatarServices: FC = (): ReactNode => {
                         </ol>
                     </nav>
 
-                    <div className='flex flex-col gap-7 pt-16'>
+                    <div className='flex flex-col gap-6 pt-12 sm:gap-7 sm:pt-16'>
                         <Eyebrow label='Private transfers in Doha & Qatar' tone='light' withDot />
 
                         <h1 className='heading-xl max-w-[14ch] text-[clamp(2.6rem,7vw,5.5rem)] text-white'>
@@ -273,7 +273,7 @@ const QatarServices: FC = (): ReactNode => {
                             <Link
                                 key={entry.title}
                                 href={entry.href}
-                                className='group flex items-start justify-between gap-4 rounded-2xl border border-border bg-card px-6 py-6 transition-colors hover:border-ink/30'
+                                className='group flex items-start justify-between gap-4 rounded-2xl border border-border bg-card px-4 py-5 transition-colors hover:border-ink/30 sm:px-6 sm:py-6'
                             >
                                 <div className='flex flex-col gap-2'>
                                     <span className='eyebrow text-brand'>

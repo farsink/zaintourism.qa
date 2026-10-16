@@ -120,8 +120,8 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
 
                 <div className='absolute inset-0 bg-gradient-to-b from-ink/50 via-ink/10 to-ink/55' />
 
-                <div className='relative mx-auto flex min-h-[100svh] w-full max-w-[1440px] flex-col px-5 pb-8 pt-28 sm:px-8 lg:px-12 lg:pt-32'>
-                    <div className='flex flex-1 flex-col justify-center gap-8 py-12'>
+                <div className='relative mx-auto flex min-h-[100svh] w-full max-w-[1440px] flex-col px-5 pb-8 pt-24 sm:px-8 sm:pt-28 lg:px-12 lg:pt-32'>
+                    <div className='flex flex-1 flex-col justify-center gap-6 py-8 sm:gap-8 sm:py-12'>
                         <Eyebrow label='Zain Tourism · Qatar' tone='light' withDot className='rise-in' />
 
                         <h1 className='heading-xl rise-in max-w-[14ch] text-[clamp(2.75rem,7.2vw,5.75rem)] text-white [animation-delay:120ms]'>
@@ -143,12 +143,12 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
                         </div>
                     </div>
 
-                    <div className='rise-in grid max-w-[1150px] gap-6 border-t border-white/15 pt-7 [animation-delay:500ms] sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15'>
+                    <div className='rise-in grid max-w-[1150px] grid-cols-2 gap-x-4 gap-y-5 border-t border-white/15 pt-6 [animation-delay:500ms] sm:grid-cols-2 sm:gap-6 sm:pt-7 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15'>
                         <a
                             href={contactHref}
-                            className='group flex items-center gap-4 lg:pr-8'
+                            className='group flex items-center gap-3 sm:gap-4 lg:pr-8'
                         >
-                            <WhatsAppBrandIcon className='size-6 shrink-0' />
+                            <WhatsAppBrandIcon className='size-5 shrink-0 sm:size-6' />
 
                             <span className='flex flex-col gap-0.5'>
                                 <span className='text-[15px] font-medium text-white'>WhatsApp</span>
@@ -158,9 +158,9 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
 
                         <a
                             href={contactHref}
-                            className='group flex items-center gap-4 lg:px-8'
+                            className='group flex items-center gap-3 sm:gap-4 lg:px-8'
                         >
-                            <Phone className='size-6 shrink-0 text-white' strokeWidth={1.6} aria-hidden='true' />
+                            <Phone className='size-5 shrink-0 text-white sm:size-6' strokeWidth={1.6} aria-hidden='true' />
 
                             <span className='flex flex-col gap-0.5'>
                                 <span className='text-[15px] font-medium text-white'>Direct contact</span>
@@ -170,9 +170,9 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
 
                         <a
                             href={contactHref}
-                            className='group flex items-center gap-4 lg:px-8'
+                            className='group flex items-center gap-3 sm:gap-4 lg:px-8'
                         >
-                            <Mail className='size-6 shrink-0 text-white' strokeWidth={1.6} aria-hidden='true' />
+                            <Mail className='size-5 shrink-0 text-white sm:size-6' strokeWidth={1.6} aria-hidden='true' />
 
                             <span className='flex flex-col gap-0.5'>
                                 <span className='text-[15px] font-medium text-white'>Email</span>
@@ -182,9 +182,9 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
 
                         <a
                             href={contactHref}
-                            className='group flex items-center gap-4 lg:pl-8'
+                            className='group flex items-center gap-3 sm:gap-4 lg:pl-8'
                         >
-                            <MapPin className='size-6 shrink-0 text-white' strokeWidth={1.6} aria-hidden='true' />
+                            <MapPin className='size-5 shrink-0 text-white sm:size-6' strokeWidth={1.6} aria-hidden='true' />
 
                             <span className='flex flex-col gap-0.5'>
                                 <span className='text-[15px] font-medium text-white'>Based in Doha</span>
@@ -351,7 +351,7 @@ const QatarPreviewHome: FC<QatarPreviewHomeProps> = ({ basePath = qatarPreviewBa
                             )}
                         >
                             <div className='overflow-hidden'>
-                                <div className='mt-2 flex flex-col gap-8 overflow-hidden rounded-[1.5rem] border border-border bg-card px-6 py-10 sm:px-8'>
+                                <div className='mt-2 flex flex-col gap-8 overflow-hidden rounded-[1.5rem] border border-border bg-card px-4 py-6 sm:px-8 sm:py-10'>
                                     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
                                         {remainingQatarTours.map((tour) => (
                                             <QatarTourCard key={tour.slug} tour={tour} basePath={detailBasePath} />

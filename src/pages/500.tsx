@@ -18,9 +18,9 @@ const ServerError: FC = (): ReactNode => {
                 <meta name='robots' content='noindex' />
             </Head>
 
-            <section className='bg-background py-28 lg:py-40'>
+            <section className='bg-background py-20 sm:py-28 lg:py-40'>
                 <div className='mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12'>
-                    <div className='flex max-w-2xl flex-col gap-8'>
+                    <div className='flex max-w-2xl flex-col gap-6 sm:gap-8'>
                         <Eyebrow label='Error 500' withDot />
 
                         <h1 className='heading-xl text-[clamp(2.5rem,6vw,4.5rem)] text-ink'>
@@ -32,7 +32,7 @@ const ServerError: FC = (): ReactNode => {
                             happening, send us a note and we will sort it out.
                         </p>
 
-                        <div className='flex flex-wrap items-center gap-5 pt-2'>
+                        <div className='flex flex-wrap items-center gap-4 pt-2 sm:gap-5'>
                             <PillLink href='/' size='lg'>
                                 Back to home
                             </PillLink>

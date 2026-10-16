@@ -72,7 +72,7 @@ const AboutPage: FC = (): ReactNode => {
                 )}
             />
 
-            <section className='bg-background py-20 lg:py-28'>
+            <section className='bg-background py-16 sm:py-20 lg:py-28'>
                 <div className='mx-auto grid w-full max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:items-center lg:gap-16 lg:px-12'>
                     <div className='flex flex-col gap-6 lg:col-span-6'>
                         <Eyebrow label='Our story' number='01' />
@@ -106,7 +106,7 @@ const AboutPage: FC = (): ReactNode => {
             </section>
 
             <section className='bg-ink py-16 text-white lg:py-20'>
-                <div className='mx-auto grid w-full max-w-[1440px] gap-10 px-5 sm:px-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15 lg:px-12'>
+                <div className='mx-auto grid w-full max-w-[1440px] gap-7 px-5 sm:gap-10 sm:px-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15 lg:px-12'>
                     <div className='flex flex-col gap-3 lg:px-8 lg:first:pl-0'>
                         <p className='heading-lg text-[2.2rem]'>One team</p>
                         <p className='text-[14px] leading-relaxed text-white/60'>
@@ -134,7 +134,7 @@ const AboutPage: FC = (): ReactNode => {
                 </div>
             </section>
 
-            <section className='bg-muted py-20 lg:py-28'>
+            <section className='bg-muted py-16 sm:py-20 lg:py-28'>
                 <div className='mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12'>
                     <div className='flex flex-col gap-5'>
                         <Eyebrow label='What we stand for' number='02' />
@@ -143,14 +143,14 @@ const AboutPage: FC = (): ReactNode => {
                         </h2>
                     </div>
 
-                    <div className='mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+                    <div className='mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4'>
                         {values.map((value) => {
                             const ValueIcon = value.icon
 
                             return (
-                                <article key={value.title} className='flex min-h-[250px] flex-col rounded-2xl bg-background p-6 sm:p-7'>
+                                <article key={value.title} className='flex min-h-[220px] flex-col rounded-2xl bg-background p-5 sm:min-h-[250px] sm:p-7'>
                                     <ValueIcon className='size-6 text-brand' strokeWidth={1.6} aria-hidden='true' />
-                                    <h3 className='mt-auto pt-12 heading-lg text-[22px] text-ink'>
+                                    <h3 className='mt-auto pt-8 heading-lg text-[22px] text-ink sm:pt-12'>
                                         {value.title}
                                     </h3>
                                     <p className='mt-3 text-[14px] leading-relaxed text-muted-foreground'>
@@ -163,7 +163,7 @@ const AboutPage: FC = (): ReactNode => {
                 </div>
             </section>
 
-            <section className='bg-background py-20 lg:py-28'>
+            <section className='bg-background py-16 sm:py-20 lg:py-28'>
                 <div className='mx-auto grid w-full max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:items-center lg:gap-16 lg:px-12'>
                     <div className='relative order-2 aspect-[16/10] overflow-hidden rounded-2xl bg-muted lg:order-1 lg:col-span-7'>
                         <Image
@@ -195,7 +195,7 @@ const AboutPage: FC = (): ReactNode => {
                 </div>
             </section>
 
-            <section className='bg-muted/70 py-20 lg:py-28'>
+            <section className='bg-muted/70 py-16 sm:py-20 lg:py-28'>
                 <div className='mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12'>
                     <div className='grid gap-12 lg:grid-cols-12 lg:gap-16'>
                         <div className='lg:col-span-5'>

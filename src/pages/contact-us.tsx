@@ -122,15 +122,15 @@ const QatarContact: FC = (): ReactNode => {
                         </span>
                     </div>
                 )}
-                className='pb-16 lg:pb-20'
+                className='pt-12 pb-10 sm:pt-16 sm:pb-16 lg:pt-24 lg:pb-20'
             />
 
-            <section id='enquiry' className='bg-background pb-20 lg:pb-28'>
-                <div className='mx-auto grid w-full max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:gap-8 lg:px-12'>
+            <section id='enquiry' className='bg-background pb-16 sm:pb-20 lg:pb-28'>
+                <div className='mx-auto grid w-full max-w-[1440px] gap-8 px-5 sm:gap-10 sm:px-8 lg:grid-cols-12 lg:gap-8 lg:px-12'>
                     <div className='lg:col-span-7'>
                         <div className='rounded-[1.5rem] border border-border bg-card p-6 sm:p-9'>
                             {status === 'success' ? (
-                                <div className='flex flex-col items-start gap-6 py-10' role='status' aria-live='polite'>
+                                <div className='flex flex-col items-start gap-6 py-8 sm:py-10' role='status' aria-live='polite'>
                                     <span className='grid size-14 place-items-center rounded-full bg-ink text-background'>
                                         <Check className='size-6' strokeWidth={1.75} aria-hidden='true' />
                                     </span>

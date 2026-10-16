@@ -46,7 +46,7 @@ const QatarExperienceDetail: FC<QatarExperienceDetailProps> = ({ experience }): 
                 />
                 <div className='absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/25 to-ink/85' />
 
-                <div className='relative mx-auto flex min-h-[88svh] w-full max-w-[1440px] flex-col justify-end px-5 pb-12 pt-28 sm:px-8 lg:px-12 lg:pb-16'>
+                <div className='relative mx-auto flex min-h-[88svh] w-full max-w-[1440px] flex-col justify-end px-5 pb-8 pt-24 sm:px-8 sm:pb-12 sm:pt-28 lg:px-12 lg:pb-16'>
                     <nav aria-label='Breadcrumb' className='mb-auto pt-6'>
                         <ol className='flex flex-wrap items-center gap-2 text-[13px] text-white/60'>
                             <li>
@@ -67,7 +67,7 @@ const QatarExperienceDetail: FC<QatarExperienceDetailProps> = ({ experience }): 
                         </ol>
                     </nav>
 
-                    <div className='flex flex-col gap-7 pt-16'>
+                    <div className='flex flex-col gap-6 pt-10 sm:gap-7 sm:pt-16'>
                         <Eyebrow label={experience.category} tone='light' withDot />
                         <h1 className='heading-xl max-w-[14ch] text-[clamp(2.6rem,7vw,5.5rem)] text-white'>
                             {experience.title}
@@ -75,7 +75,7 @@ const QatarExperienceDetail: FC<QatarExperienceDetailProps> = ({ experience }): 
                         <p className='max-w-xl text-[15px] leading-relaxed text-white/75'>
                             {experience.summary}
                         </p>
-                        <div className='flex flex-wrap gap-x-8 gap-y-4 border-t border-white/15 pt-7 text-[14px] text-white/80'>
+                        <div className='flex flex-wrap gap-x-5 gap-y-3 border-t border-white/15 pt-5 text-[14px] text-white/80 sm:gap-x-8 sm:gap-y-4 sm:pt-7'>
                             <span className='inline-flex items-center gap-2'>
                                 <Clock className='size-4' strokeWidth={1.6} aria-hidden='true' />
                                 {experience.duration}

@@ -214,7 +214,7 @@ const QatarTours: FC = (): ReactNode => {
                 />
                 <div className='bg-gradient-to-b from-ink/75 via-ink/25 to-ink/85 absolute inset-0' />
 
-                <div className='relative mx-auto flex min-h-[88svh] w-full max-w-[1440px] flex-col justify-end px-5 pb-12 pt-28 sm:px-8 lg:px-12 lg:pb-16'>
+                <div className='relative mx-auto flex min-h-[88svh] w-full max-w-[1440px] flex-col justify-end px-5 pb-8 pt-24 sm:px-8 sm:pb-12 sm:pt-28 lg:px-12 lg:pb-16'>
                     <nav aria-label='Breadcrumb' className='mb-auto pt-6'>
                         <ol className='flex flex-wrap items-center gap-2 text-[13px] text-white/60'>
                             <li>
@@ -229,7 +229,7 @@ const QatarTours: FC = (): ReactNode => {
                         </ol>
                     </nav>
 
-                    <div className='flex flex-col gap-7 pt-16'>
+                    <div className='flex flex-col gap-6 pt-10 sm:gap-7 sm:pt-16'>
                         <Eyebrow label='All tours & experiences' tone='light' withDot />
 
                         <h1 className='heading-xl max-w-[14ch] text-[clamp(2.6rem,7vw,5.5rem)] text-white'>

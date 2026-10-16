@@ -31,8 +31,8 @@ const NotFound: FC = (): ReactNode => {
 
                 <div className='absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/40' />
 
-                <div className='relative mx-auto w-full max-w-[1440px] px-5 py-28 sm:px-8 lg:px-12 lg:py-36'>
-                    <div className='flex max-w-2xl flex-col gap-8'>
+                <div className='relative mx-auto w-full max-w-[1440px] px-5 py-20 sm:px-8 sm:py-28 lg:px-12 lg:py-36'>
+                    <div className='flex max-w-2xl flex-col gap-6 sm:gap-8'>
                         <Eyebrow label='Error 404' tone='light' withDot />
 
                         <h1 className='heading-xl text-[clamp(2.5rem,6vw,4.5rem)] text-white'>
@@ -57,7 +57,7 @@ const NotFound: FC = (): ReactNode => {
                 </div>
             </section>
 
-            <section className='bg-background py-20 lg:py-24'>
+            <section className='bg-background py-16 sm:py-20 lg:py-24'>
                 <div className='mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12'>
                     <h2 className='heading-lg text-[clamp(1.6rem,3vw,2.25rem)] text-ink'>
                         Try one of these instead
